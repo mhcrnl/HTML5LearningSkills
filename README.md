@@ -13,6 +13,10 @@ Html5 este un standard viu, in permanenta dezvoltare care poate fi folosit si in
 	>08.Validati codul.
 	>09.Atentie html5 se schimba fiti la curent.
 	>10.Implicativa in dezvoltare
+
+## JavaScript librarii: ##
+	> [Mootool](http://mootool.net)
+
 =======
 HTML5LearningSkills
 ===================
