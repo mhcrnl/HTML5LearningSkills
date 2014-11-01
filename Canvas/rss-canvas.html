@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RSS-logo mit &lt;canvas> - RSS logo with &lt;canvas></title>
+<style>
+body { text-align: center; }
+</style>
+<script>
+function zeichnen(){
+	var canvas = document.getElementById('rss');
+	if (canvas.getContext){
+		var ctx = canvas.getContext('2d');
+
+		// Den verlauf vorbereiten und der füllung zuweisen
+    var verlauf = ctx.createLinearGradient(0,0,24,24);
+		verlauf.addColorStop(0, 'rgb(236,138,68)');
+		verlauf.addColorStop(0.5, 'rgb(252,158,60)');
+		verlauf.addColorStop(1, 'rgb(220,98,44)');
+    ctx.fillStyle = verlauf;
+
+    // Ein rechteck mit abgerundeten ecken zeichnen und füllen
+	  ctx.beginPath();
+	  ctx.moveTo(0,5);
+	  ctx.quadraticCurveTo(0,0,5,0);
+	  ctx.lineTo(19,0);
+	  ctx.quadraticCurveTo(24,0,24,5);
+	  ctx.lineTo(24,19);
+	  ctx.quadraticCurveTo(24,24,19,24);
+	  ctx.lineTo(5,24);
+	  ctx.quadraticCurveTo(0,24,0,19);
+	  ctx.fill();
+
+    // Die viertelbögen und der punkt
+		ctx.strokeStyle = "#ffffff";
+		ctx.lineWidth = 3;
+		ctx.beginPath();
+	  ctx.arc(4,21,15,Math.PI*3/2,0,false);
+	  ctx.moveTo(4,11);
+	  ctx.arc(4,21,10,Math.PI*3/2,0,false);
+	  ctx.moveTo(8,18);
+	  ctx.arc(7,18,1,Math.PI*2,0,false);
+	  ctx.stroke();
+	}
+}
+
+function draw(){
+	var canvas = document.getElementById('rss_en');
+	if (canvas.getContext){
+		var ctx = canvas.getContext('2d');
+
+		// Prepare gradient and make it fill style
+    var gradient = ctx.createLinearGradient(0,0,24,24);
+		gradient.addColorStop(0, 'rgb(236,138,68)');
+		gradient.addColorStop(0.5, 'rgb(252,158,60)');
+		gradient.addColorStop(1, 'rgb(220,98,44)');
+    ctx.fillStyle = gradient;
+
+    // Draw rectangle with rounded corners and fill it
+	  ctx.beginPath();
+	  ctx.moveTo(0,5);
+	  ctx.quadraticCurveTo(0,0,5,0);
+	  ctx.lineTo(19,0);
+	  ctx.quadraticCurveTo(24,0,24,5);
+	  ctx.lineTo(24,19);
+	  ctx.quadraticCurveTo(24,24,19,24);
+	  ctx.lineTo(5,24);
+	  ctx.quadraticCurveTo(0,24,0,19);
+	  ctx.fill();
+
+    // Draw quarter circles and dot
+		ctx.strokeStyle = "#ffffff";
+		ctx.lineWidth = 3;
+		ctx.beginPath();
+	  ctx.arc(4,21,15,Math.PI*3/2,0,false);
+	  ctx.moveTo(4,11);
+	  ctx.arc(4,21,10,Math.PI*3/2,0,false);
+	  ctx.moveTo(8,18);
+	  ctx.arc(7,18,1,Math.PI*2,0,false);
+	  ctx.stroke();
+	}
+}
+</script>
+</head>
+
+<body onLoad="zeichnen();draw();">
+<h1>Voil&agrave;, das logo!</h1>
+
+<canvas id="rss" width=24 height=24></canvas>
+
+<p>
+ohne grafik, nur mit code.<br>
+mit besten empfehlungen von<br>
+<a href="http://blechtrottel.net">blechtrottel brodaktschns/en</a></p>
+<p>
+Nicht vergessen: Im Internet Explorer braucht man das <a href="http://code.google.com/p/explorercanvas/">excanvas.js</a></p>
+<h1>Voil&agrave;, our logo!</h1>
+
+<canvas id="rss_en" width=24 height=24></canvas>
+
+<p>
+no images, code only.<br>
+with compliments from<br>
+<a href="http://blechtrottel.net/en/">blechtrottel brodaktschns</a></p>
+<p>
+Reminder: In Internet Explorer you need <a href="http://code.google.com/p/explorercanvas/">excanvas.js</a></p>
+</body>
+</html>
