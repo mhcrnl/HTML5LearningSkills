@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Web Design</h1>
+<p>Suntem mandrii ca utilizam cele mai noi tehnologii în proiectarea web ca de exemplu <b>HTML5/CSS3/JavaScript</b> pe partea de design si 
+interacțiune, <b>PHP/MySQL</b> schimb de date si stocare, <b>Responsive Web Design</b> pe vizualizarea site-ului pe diferite terminale.</p>
+<!-- acesta este meniul # doar pentru testare -->
+<ul>
+	<li><a href="#acasa">Acasa</a></li>
+
+
+
+</ul>
+
+
+<input type="datetime">
+
+</body>
+</html>

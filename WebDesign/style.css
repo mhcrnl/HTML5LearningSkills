@@ -1,0 +1,9 @@
+h1 {
+	background-color: orange;
+	text-align: right;
+}
+ul{
+	list-style-type: disc;
+	margin: 0;
+	padding: 0;
+}
